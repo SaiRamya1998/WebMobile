@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script type="text/javascript" src="./lib/jquery-3.3.1.min.js"></script>
+    <style>
+         .container{
+            background-color: white;
+            border-radius: 3px  ;
+            margin: 50px auto;
+            width: 600px;
+            height: 520px;
+            box-shadow: 3px 3px 30px rgba(0,0,0,0.1)
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>Press any button to play the game</h1>
+
+    <div class="button-row">
+        <div>
+            <img src="../documentation/rock.png" onclick="rock()" alt="" width="150" height="150">
+            <img src="../documentation/paper.png" onclick="paper()" alt="" width="150" height="150">
+            <img src="../documentation/scissor.png" onclick="scissors()" alt="" width="150" height="150">
+        </div>
+
+    </div>
+
+    <label id="rock"> </label>
+    <script src="gamescript.js"></script>
+</div>
+</body>
+</html>
