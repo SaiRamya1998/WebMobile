@@ -1,0 +1,34 @@
+<!-- <div class="todos"> -->
+
+  <div class="container">
+    <div>
+      <form #todoForm="ngForm" (submit)="todoSubmit(todoForm.value); todoForm.resetForm()">
+        <div class="form-group">
+          <h1 class="text-center ">Todo App</h1>
+          <div class="input-group-prepend">
+            <input type="text" #todo class="form-control" placeholder="Add Todo" name="todo" ngModel>
+            <span class="input-group-text" (click)="addTodo(todo.value)">
+              <i>+</i></span>
+          </div>
+        </div>
+        <div class="data">
+          <ul class="list-unstyled">
+            <li *ngFor="let todo of todoArray">{{todo}} <i (click)="deleteItem(todo)">deletetodo</i></li>
+          </ul>
+        </div>
+      </form>  
+    </div>
+    
+    <div align="center">
+      <h2>Countdown</h2>
+      <dp-date-picker #value theme="dp-material" [config]="datePickerConfig" required="true" placeholder="Select Date" [(ngModel)]="selectedDate">
+      </dp-date-picker>
+      <button (click)="getDate(value)">Click Me</button>
+  
+      <div *ngIf="dateinFormat">
+        <countdown units="Year | Month | Days | Hours | Minutes | Seconds" end={{dateinFormat}}></countdown>
+      </div>
+    </div>
+
+  </div>
+
