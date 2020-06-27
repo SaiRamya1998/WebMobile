@@ -1,0 +1,57 @@
+<div class="parent-container">
+  <div class="child-container">
+    <h2><b>Find your Near By Restaurants!!
+    </b></h2><br>
+    <!-- <h2>Hello, Welcome to <b>Find Your Restaurants & Recipe!!!</b></h2> -->
+    <!-- <span class="desc">FInd Your Recipe is a Mashup Web Application which is built using <i> Foursquare & Edamam's Recipe Search API </i> . This application find Recipe and Place to find that Food.</span><br><br><br> -->
+    <!-- <form> -->
+      <!-- <div>
+        <button (click)="openRestaurant()">Get Restaurants</button>
+        <button (click)="findRecipe()">Find Recipe</button>
+      </div> -->
+      <!-- <div class="form-group" *ngIf = "!restaurantSearch && recipeSearch">
+        <label>Enter Dish:</label><br><br>
+        <div class="form-group col-lg-4 col-lg-offset-4">
+          <input #recipe type="text" class="form-control" placeholder="Enter Dish Name"/>
+        </div>
+        <br>
+        <button class="btn btn primary col-lg-2 col-lg-offset-5" (click)="getRecipeDetails(recipe.value)">Submit</button>
+      </div> -->
+      <div class="form-group">
+        <label>Enter Place:</label><br><br>
+        <div class="form-group col-lg-4 col-lg-offset-4">
+          <input #place type="text" class="form-control" placeholder="Enter Place"/>
+        </div>
+        <br>
+        <button class="btn btn primary col-lg-2 col-lg-offset-5" (click)="getPlaceDetails(place.value)">Submit</button>
+      </div>
+    <!-- </form> -->
+  </div>
+</div>
+<br><br><br>
+<div align="center" class="container" *ngIf="restaurantsResponse">
+  <div class="row">
+    <div class="col-lg">
+      <div class="panel panel-default col">
+        <div class="panel-heading"><b>Restaurants Near By</b></div>
+        <div class="panel-body">
+
+          <div *ngFor="let restaurant of restaurantsResponse?.response.venues | slice:0:5;" class="list-group-item clearfix">
+            <!-- <img src="{{restaurant.categories[0].icon.prefix}}{{restaurant.categories[0].icon.suffix}}" style="width: 70px; height: 50px;" align="center"/> -->
+            <div class="pull-left">
+              <h4 class="list-group-item-heading">{{ restaurant.name }}</h4>
+            </div>
+
+            <span class="pull-right">
+             <a href="http://maps.google.com/maps?saddr={{currentLat}},{{currentLong}}
+             &daddr={{restaurant.location.formattedAddress[0]}},{{restaurant.location.formattedAddress[1]}},{{restaurant.location.formattedAddress[2]}}" target="_blank">
+               <img src="../../assets/google.png" style="width: 30px; height: 30px;"></a>
+            </span>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
