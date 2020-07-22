@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SQLiteSampleApp.iml" filepath="$PROJECT_DIR$/.idea/modules/SQLiteSampleApp.iml" group="SQLiteSampleApp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SQLiteSampleApp-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SQLiteSampleApp-app.iml" group="SQLiteSampleApp/app" />
+      <module fileurl="file://$PROJECT_DIR$/SQLiteSampleApp-master.iml" filepath="$PROJECT_DIR$/SQLiteSampleApp-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+    </modules>
+  </component>
+</project>
